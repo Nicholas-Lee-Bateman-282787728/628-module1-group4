@@ -1,5 +1,6 @@
 # 628-module1-group4
-a Github repository that contains all of the data analysis in module1 of stat628
+A Github repository that contains all of the data analysis in module1 of stat628
+
 # Project Title
 
 stat628 module 1: bodyfat calculator
