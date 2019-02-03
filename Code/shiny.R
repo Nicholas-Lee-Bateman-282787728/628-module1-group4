@@ -9,7 +9,7 @@ ui = shinyUI(pageWithSidebar(
   
   sidebarPanel(
     numericInput("Age", "Age (years):", min = 0, max = 150, value = NA),
-    helpText("The number you enter must be an interger between 0 and 150"),   
+    helpText("The number you enter must be an integer between 0 and 150"),   
     numericInput("Abdomen", "Abdomen circumference (cm):", min = 50, max = 150, value = NA),
     helpText("The number you enter must between 0 and 200"),
     numericInput("Wrist", "Wrist circumference (cm):", min = 10, max = 30, value = NA),
@@ -39,12 +39,13 @@ server = shinyServer(function(input, output) {
     new_data = data.frame(  "AGE" = round(input$Age),
                             "ABDOMEN" = input$Abdomen,
                             "WRIST" = input$Wrist)
-    if (is.na(new_data)[1,1] == TRUE | is.na(new_data)[1,2] == TRUE | is.na(new_data)[1,3] == TRUE){
-      pre = c("", "", "","")
+    
+    if (is.na(new_data[1,1]) == TRUE | is.na(new_data[1,2]) == TRUE | is.na(new_data[1,3]) == TRUE){
+      pre = c("", "", "", "")
     }
     else if (new_data[1,1] < 0 | new_data[1,1] > 150 | new_data[1,2] < 0 | new_data[1,2] > 200
         | new_data[1,3] < 0 | new_data[1,3] > 50){
-      pre = c("Input error", "Input error", "Input error")
+      pre = c("", "", "","Input error")
     }
     else{
       pre1 = predict(model, new_data, interval = "confidence", level = 0.95)
@@ -64,6 +65,9 @@ server = shinyServer(function(input, output) {
   output$conclusion <- renderImage({
     if (prediction()[4] == ""){
       text = normalizePath(file.path('./Images/open.png'))
+    }
+    else if (prediction()[4] == "Input error"){
+      text = normalizePath(file.path('./Images/error.png'))
     }
     else{
       if(as.numeric(prediction()[4]) >= 26){
