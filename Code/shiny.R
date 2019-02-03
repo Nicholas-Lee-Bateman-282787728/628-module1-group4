@@ -84,8 +84,8 @@ server = shinyServer(function(input, output) {
     }
 
     list(src = text,         
-         width = 600,
-         height = 50)
+         width = 630,
+         height = 45)
   }, deleteFile = FALSE)
   
   output$fomula <- renderImage({
