@@ -2,7 +2,7 @@
 a Github repository that contains all of the data analysis in module1 of stat628
 # Project Title
 
-One Paragraph of project description goes here
+stat628 module 1: bodyfat calculator
 
 ## Getting Started
 
@@ -13,77 +13,52 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+install.packages(shiny)
+library(shiny)
 ```
 
-### Installing
+## Containings
 
-A step by step series of examples that tell you how to get a development env running
+This repositary containing 4 folders:
+1. Data: containing the raw and cleaned data.
+2. Code: containing all the R code for this analysis, including the code for data cleaning, data analysis, shiny app.
+3. Image: containing all the images using in this analysis, including the images used in analysis and shiny app.
+4. Excutive summary: a jupyter notebook that provide a concise, replicable, and clear description of this analysis and findings.
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
+### Running Rshiny
+
+You have to install and library shiny packages first
+
+```
+install.packages(shiny)
+library(shiny)
+```
+
+Then you have to set the working directory to the current folder
+
+```
+setwd("~/628-module1-group4")
+```
+
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [R](https://www.r-project.org/) - Free software environment for statistical computing and graphics
+* [Shiny](https://shiny.rstudio.com/) - Interactive web apps
+* [Jupyter](https://jupyter.org/) - Open-source web application
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Shuo Qiang** - [email](sqiang@wisc.edu)
+* **Jiatong Li** - [email](jli872@wisc.edu)
+* **Yixin Chen** - [email](chen777@wisc.edu)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks for the instruction from Professor Hyunseung Kang
+* Thanks for the help and instruction from Peigen Zhou
