@@ -54,9 +54,9 @@ setwd("~/628-module1-group4")
 
 ## Authors
 
-* **Shuo Qiang** - [email](sqiang@wisc.edu)
-* **Jiatong Li** - [email](jli872@wisc.edu)
-* **Yixin Chen** - [email](chen777@wisc.edu)
+* **Shuo Qiang** - (sqiang@wisc.edu)
+* **Jiatong Li** - (jli872@wisc.edu)
+* **Yixin Chen** - (chen777@wisc.edu)
 
 
 ## Acknowledgments
