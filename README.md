@@ -16,7 +16,8 @@ What things you need to install the software and how to install them
 ```
 install.packages("car")
 library(car)
-
+install.packages("repr")
+library(repr)
 install.packages("shiny")
 library(shiny)
 ```
