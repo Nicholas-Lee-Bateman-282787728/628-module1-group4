@@ -1,7 +1,6 @@
 library(shiny)
 
-setwd("./628-module1-group4")
-data = read.csv("./Data/BodyFat_cleaned.csv", header = TRUE)
+data = read.csv("../Data/BodyFat_cleaned.csv", header = TRUE)
 data = data[,c("BODYFAT","AGE","ABDOMEN","WRIST")]
 
 ui = shinyUI(pageWithSidebar(
