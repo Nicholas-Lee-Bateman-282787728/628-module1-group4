@@ -14,10 +14,10 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-install.packages(``car")
+install.packages("car")
 library(car)
 
-install.packages(``shiny")
+install.packages("shiny")
 library(shiny)
 ```
 
