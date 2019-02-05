@@ -1,8 +1,8 @@
 #Codes for modelling of STAT 628 Module 1 Group 4
 
 
-# read data and data cleaning
-rawData <- read.csv("BodyFat.csv" , header = T)
+# read data and clean data
+rawData <- read.csv("../Data/BodyFat.csv" , header = T)
 rawData$DENSITY[96] = 1.0592
 rawData$HEIGHT[42] = 69.428
 rawData <- rawData[-c(39,182),]
