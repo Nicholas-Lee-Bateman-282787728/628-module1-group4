@@ -30,9 +30,6 @@ This repositary containing 4 folders:
 
 
 ## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ### Running Rshiny
 
 You have to install and library shiny packages first
