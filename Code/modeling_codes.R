@@ -55,8 +55,11 @@ newx <- x[,c(2,5:14)]/x$HEIGHT
 newx$ADIPOSITY <- x$ADIPOSITY
 newx$AGE <- x$AGE
 
-f2 <- featureWeight(y,newx)
+f2 <- sort_feature(y,newx)
 print(f2)
+
+m2 <- lm(y~.,data = newx)
+step(m2, direction = "both", criterion = "bic")
 
 print(round(cal_score(y , newx[,c("ABDOMEN") , drop = F]), 2))
 summary(lm(y~., data = newx[,c("ABDOMEN") , drop = F]))
