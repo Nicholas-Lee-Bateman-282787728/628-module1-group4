@@ -3,7 +3,7 @@ A Github repository that contains all of the data analysis in module1 of stat628
 
 # Project Title
 
-stat628 module 1: bodyfat calculator
+stat628 module 1: A Simple Model of Estimating Bodyfat Percentage
 
 ## Getting Started
 
@@ -18,8 +18,6 @@ install.packages("car")
 library(car)
 install.packages("repr")
 library(repr)
-install.packages("shiny")
-library(shiny)
 ```
 
 ## Containings
