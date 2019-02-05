@@ -3,6 +3,11 @@
 
 # read data and clean data
 rawData <- read.csv("../Data/BodyFat.csv" , header = T)
+par(mfrow = c(4,4))
+for (i in c(2:17)) {
+  hist(rawData[,i] , xlab = names(rawData)[i] ,main = paste("Histogram of ", names(rawData)[i]),cex.main = 0.95,
+       cex.lab = 0.85, col="gray80")}
+layout(1)
 rawData$DENSITY[96] = 1.0592
 rawData$HEIGHT[42] = 69.428
 rawData <- rawData[-c(39,182),]
@@ -88,6 +93,7 @@ lm_AAW <- lm(y~-1+., data = x[,c("ABDOMEN" , "AGE" , "WRIST")])
 
 
 #Dignosis Plots for final model
+layout(1)
 plot(lm_AAW, pch=23, bg="darkorange", which=1, cex=0.9)
 plot(lm_AAW, pch=23, bg="darkorange", which=2, cex=0.9)
 plot(lm_AAW, pch=23, bg="darkorange", which=4, cex=0.9)
