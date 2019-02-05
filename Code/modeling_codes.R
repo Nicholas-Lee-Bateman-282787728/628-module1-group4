@@ -1,5 +1,6 @@
 #Codes for modelling of STAT 628 Module 1 Group 4
 
+
 # read data and data cleaning
 rawData <- read.csv("BodyFat.csv" , header = T)
 rawData$DENSITY[96] = 1.0592
@@ -22,7 +23,6 @@ source("cal_score.R") #This is a function to calculate the score of models using
 
 
 # random feature selection
-
 f <- sort_feature(y,x)
 print(f)
 
@@ -47,6 +47,7 @@ summary(lm(y~., data = x[,c("ABDOMEN" , "AGE" , "WRIST")]))
 
 print(round(cal_score(y , x[,c("ABDOMEN" , "AGE" , "WRIST")] , intercept = F), 2))
 summary(lm(y~-1+., data = x[,c("ABDOMEN" , "AGE" , "WRIST")]))
+
 
 # generating feature
 newx <- x[,c(2,5:14)]/x$HEIGHT
@@ -77,8 +78,12 @@ summary(lm(y~., data = as.data.frame(newx$ABDOMEN - newx$WRIST)))
 print(round(cal_score(y , as.data.frame(newx$ABDOMEN - newx$NECK)), 2))
 summary(lm(y~., data = as.data.frame(newx$ABDOMEN - newx$NECK)))
 
-#Dignosis Plots for final model
+
+#We chose the following AAW model as our final model.
 lm_AAW <- lm(y~-1+., data = x[,c("ABDOMEN" , "AGE" , "WRIST")])
+
+
+#Dignosis Plots for final model
 plot(lm_AAW, pch=23, bg="darkorange", which=1, cex=0.9)
 plot(lm_AAW, pch=23, bg="darkorange", which=2, cex=0.9)
 plot(lm_AAW, pch=23, bg="darkorange", which=4, cex=0.9)
