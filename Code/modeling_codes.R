@@ -9,6 +9,7 @@ rawData <- rawData[-c(39,182),]
 y <- rawData$BODYFAT
 z <- rawData$DENSITY
 x <- rawData[,4:17]
+#This cleaned data is written as "BodyFat_cleaned.csv" in our data folder.
 
 
 #stepwise feature selection
