@@ -63,26 +63,26 @@ server = shinyServer(function(input, output) {
   
   output$conclusion <- renderImage({
     if (prediction()[4] == ""){
-      text = normalizePath(file.path('./Images/open.png'))
+      text = normalizePath(file.path('../Images/open.png'))
     }
     else if (prediction()[4] == "Input error"){
-      text = normalizePath(file.path('./Images/error.png'))
+      text = normalizePath(file.path('../Images/error.png'))
     }
     else{
       if(as.numeric(prediction()[4]) >= 26){
-        text = normalizePath(file.path('./Images/over.png'))
+        text = normalizePath(file.path('../Images/over.png'))
       }
       if (as.numeric(prediction()[4]) >= 17 & as.numeric(prediction()[4]) < 26){
-        text = normalizePath(file.path('./Images/normal.png'))
+        text = normalizePath(file.path('../Images/normal.png'))
       }
       if (as.numeric(prediction()[4]) >= 11 & as.numeric(prediction()[4]) < 17){
-        text = normalizePath(file.path('./Images/fit.png'))
+        text = normalizePath(file.path('../Images/fit.png'))
       }
       if (as.numeric(prediction()[4]) >= 7 & as.numeric(prediction()[4]) < 11){
-        text = normalizePath(file.path('./Images/athlete.png'))
+        text = normalizePath(file.path('../Images/athlete.png'))
       }
       if (as.numeric(prediction()[4]) < 7){
-        text = normalizePath(file.path('./Images/essential.png'))
+        text = normalizePath(file.path('../Images/essential.png'))
       }
     }
 
@@ -92,14 +92,14 @@ server = shinyServer(function(input, output) {
   }, deleteFile = FALSE)
   
   output$fomula <- renderImage({
-    filename <- normalizePath(file.path('./Images/fomula.png'))
+    filename <- normalizePath(file.path('../Images/fomula.png'))
     list(src = filename,         
          width = 600,
          height = 50)
   }, deleteFile = FALSE)
   
   output$image <- renderImage({
-    filename <- normalizePath(file.path('./Images/bodyfat.jpeg'))
+    filename <- normalizePath(file.path('../Images/bodyfat.jpeg'))
     list(src = filename,         
          width = 600,
          height = 400)
