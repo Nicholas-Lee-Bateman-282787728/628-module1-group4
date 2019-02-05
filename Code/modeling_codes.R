@@ -8,6 +8,7 @@ for (i in c(2:17)) {
   hist(rawData[,i] , xlab = names(rawData)[i] ,main = paste("Histogram of ", names(rawData)[i]),cex.main = 0.95,
        cex.lab = 0.85, col="gray80")}
 layout(1)
+#Please see our summary for this data cleaning procedure.
 rawData$DENSITY[96] = 1.0592
 rawData$HEIGHT[42] = 69.428
 rawData <- rawData[-c(39,182),]
